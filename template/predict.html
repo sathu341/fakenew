@@ -1,0 +1,28 @@
+{% extends 'home.html' %} 
+
+{% load static %} 
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+    
+        <div class="col-lg-4">
+            <h2>Headline</h2>
+            {% for l in data %}
+            {{l.headline}}
+            {% endfor %}
+        </div>
+        
+        <div class="col-lg-4">
+            <h2>Result</h2>
+
+            {{result}}
+        </div>
+        <div class="col-lg-4">
+            &nbsp;
+        </div>
+
+    </div>
+</div>
+{% endblock %}

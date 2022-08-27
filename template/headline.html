@@ -1,0 +1,48 @@
+{% extends 'home.html' %} 
+
+{% load static %} 
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+    
+            <div class="col-lg-3"> <span>Headline</span> 
+                </div>
+                <div class="col-lg-3">
+                    <span>Result</span>
+                </div> 
+                <div class="col-lg-3">
+                <span>date</span>
+                </div>
+                <div class="col-lg-3">
+                    <span>date</span>
+                    </div>
+        
+    </div>
+    <hr>
+    <div class="row">
+        
+        {% for l in data %}
+        <div class="col-lg-3">
+       
+          
+            {{l.headline}}
+           
+        </div>
+        
+        <div class="col-lg-3">
+            
+
+            {{l.result}}
+        </div>
+        <div class="col-lg-3">
+            {{l.dt}}
+        </div>
+        <div class="col-lg-3">
+            <a href="/hdelete?hid={{l.id}}" class="btn btn-danger">Delete</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
